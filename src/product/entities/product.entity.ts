@@ -1,9 +1,9 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({
-    name: 'store_categories'
+    name: 'product'
 })
-export class StoreCategory {
+export class Product {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -15,7 +15,15 @@ export class StoreCategory {
 
     @Column({
         type: 'varchar',
-        name: 'img_path',
+        name: 'slug',
     })
-    imgPath: string;
+    Slug: string;
+
+    @Column({
+        type: 'varchar',
+        name: 'descripion',
+    })
+    Descripion: string;
+
+ 
 }
